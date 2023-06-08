@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/images/man_emoji.png" />
+  <title>Alexandre Matton</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+    body {
+      color: rgb(50, 50, 50);
+    }
+
+    .hoverable:hover {
+      color: rgb(0,0,0);
+    }
+
+    section {
+      background-color: #ffffffff;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    section:hover {
+      background-color: #d0d0d0e7;
+      transition: background-color 1s;
+    }
+    
+    section:not(:hover) {
+      background-color: #ffffffff;
+      transition: background-color 1s;
+    } 
+
+    .footer-icon {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const paragraphs = document.querySelectorAll('span[id="to_hover"]');
+      paragraphs.forEach((paragraph) => {
+        const words = paragraph.innerHTML.split(' ');
+        console.log(words);
+        const wrappedWords = words.map((word) => {
+          return `<span class="hoverable">${word}</span>`;
+        });
+        paragraph.innerHTML = wrappedWords.join(' ');
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <section id="presentation" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-3">
+            <img src="assets/images/Alexandre.png" class="img-fluid rounded-circle shadow-10-strong" alt="Your Image">
+          </div>
+          <div class="col-sm-5 text-center">
+            <h1 class="display-4"><span id="to_hover">Alexandre Matton</span></h1>
+            <h3 class="lead"><span id="to_hover">Machine Learning Research Engineer at </span><a href="https://cohere.com" class="link-primary">Cohere</a></h3> 
+            <h3 class="lead">Currently living in N.Y.C.</h3>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+  </section>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2><span id="to_hover">About Me</span></h2>
+        <p><span id="to_hover">I am originally from France, where I studied Maths and Computer Science at Ecole Polytechnique. I then got a Master’s degree in </span><a href="https://icme.stanford.edu/">Computational Mathematics</a><span id="to_hover"> at Stanford University. 
+          After graduating, I started working on applied Machine Learning at </span><a href="https://scale.com/" class="link-primary">Scale AI</a><span id="to_hover"> and now at </span><a href="https://cohere.com" class="link-primary">Cohere</a>. At Scale, I built ML pipelines for document processing products. At Cohere, I am currently developping NLP products around representation learning. You can read my resume for more details <a href="./assets/misc/resume.pdf" class="link-primary">here</a>.
+
+          <br><br>
+          <span id="to_hover">I am passionate about leveraging NLP to address practical and impactful challenges. I have extensive experience in building complete ML pipelines, spanning from the inception stage to model deployment and monitoring. I have a bias toward action and I care about owning projects end-to-end. For these reasons, I love working in startups.</span>
+        </p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2><span id="to_hover">Contact</span></h2>
+      <p><span id="to_hover">If you want to connect, please feel free to reach out at [lastname][dot]alex[at]gmail[dot]com.</span></p>
+    </div>
+  </section>
+
+  <section id="footer" class="py-4 text-center">
+    <div class="container">
+      <a class="icon-link" href="./assets/misc/resume.pdf">
+        <image src="./assets/icons/fellow-recruit-message-svgrepo-com.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" href="https://github.com/alex-matton">
+        <image src="./assets/icons/github-icon-1-logo.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://twitter.com/alexmattonnlp">
+        <image src="./assets/icons/twitter.svg" class="footer-icon"/>
+      </a>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
